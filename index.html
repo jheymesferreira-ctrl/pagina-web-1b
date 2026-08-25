@@ -1,52 +1,113 @@
- <!DOCTYPE html>
-    <html lang="pt-bt">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tarefa</title>
+<!DOCTYPE html>
+<html lang="pt-bt">
 
-        <style>
-            header{
-                background-color: rgb(206, 0, 0);
-                color:rgb(0, 255, 213);
-                text-align: center;
-                
-               
-                padding:16px;
-                border: 5px solid rgb(0, 255, 221);
-            }
-            main {
-                background-color: rgb(255, 97, 97);
-                
-             
-            
-                padding:16px;
-            display: flex;
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa</title>
 
-            img{   width: 200px;
+    <style>
+        header {
+            background-color: rgb(206, 0, 0);
+            color: rgb(0, 255, 213);
+            text-align: center;
+
+
+            padding: 16px;
+            border: 5px solid rgb(0, 255, 221);
+        }
+
+        main {
+            background-color: rgb(255, 97, 97);
+
+
+
+            padding: 16px;
+
+
+            img {
+                width: 200px;
                 height: 220px;
 
             }
-                }
-        </style>
-    </head>
-    <body>
-        <header><h1>Os ADMs</h2>
-           Os principas e mais poderosos ADMs
-        </header>
+        }
+
+        article{
+            display: flex;
+        }
+
+        .Autor {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Os ADMs</h2>
+            Os principas e mais poderosos ADMs
+    </header>
 
 
-<main>
-    <img src="images.jpeg" alt="imagem inicial">
-    <div>
-        <p>Por:Jheymes</p> 
+    <main>
+        <article>
+            <img src="images.jpeg" alt="imagem inicial">
+            <div>
+                <p class="Autor">Por:Jheymes</p>
 
-         <p>Games EduUu</p>
-         <p>Cachorro Caramelo</p>
-         <p>Alguns dos ADMs mais poderosos de todos os multiversos</p>
-         <div>
-    </main>   
+                <p>Games EduUu</p>
+                <p>Cachorro Caramelo</p>
+                <p>Alguns dos ADMs mais poderosos de todos os multiversos</p>
+                <button>🗿<spam>0</spam></button>
+                <div>
+        </article>
 
-    </body>
+        <article>
+            <img src="images.jpeg" alt="imagem inicial">
+            <div>
+                <p class="Autor">Por:Jheymes</p>
 
-    </html> 
+                <p>Games EduUu</p>
+                <p>Cachorro Caramelo</p>
+                <p>Alguns dos ADMs mais poderosos de todos os multiversos</p>
+                <button>🗿<spam>0</spam></button>
+                <div>
+        </article>
+
+        <article>
+            <img src="images.jpeg" alt="imagem inicial">
+            <div>
+                <p class="Autor">Por:Jheymes</p>
+
+                <p>Games EduUu</p>
+                <p>Cachorro Caramelo</p>
+                <p>Alguns dos ADMs mais poderosos de todos os multiversos</p>
+                <button>🗿<spam>0</spam></button>
+                <div>
+        </article>
+
+    </main>
+
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+    
+    botoes.forEach(function (botao) {
+    let curtiu = false;
+    botao.addEventListener("click", botaoClicado);
+    function botaoClicado() {
+    console.log("fui clicado");
+    let texto = botao.querySelector("spam");
+    if (curtiu === false) {
+    texto.textContent++;
+    curtiu = true;
+    } else {
+    texto.textContent--;
+    curtiu = false;
+    }
+    
+    }
+    })
+    </script>
+
+</html>
